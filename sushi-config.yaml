@@ -32,15 +32,8 @@ publisher:
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
 #
-# dependencies:
-#   hl7.fhir.us.core: 7.0.0
-
-# dependencies:
-#   hl7.fhir.us.core: 3.1.0
-#   hl7.fhir.us.mcode:
-#     id: mcode
-#     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
-#     version: 1.0.0
+dependencies:
+  hl7.fhir.uv.extensions.r4: 5.2.0
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -71,9 +64,14 @@ publisher:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
-# parameters:
-#   excludettl: true
-#   validation: [allow-any-extensions, no-broken-links]
+parameters:
+  apply-publisher: true
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-version: true
+  show-inherited-invariants: true
+  excludettl: true
+  excludemap: true
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
